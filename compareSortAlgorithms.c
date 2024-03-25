@@ -1,3 +1,11 @@
+//
+// Jean Desrouleaux
+// Programming Assign 3 - movieline.c
+// 03/09/24
+// Dr. Neslisah Torosdagli
+// COP3505 Tu Th 6-7:15pm
+//
+
 #include <time.h>
 #include <stdlib.h>
 #include <stdio.h>
@@ -66,6 +74,7 @@ void f_heap(int *pData, int n, int i)
 
 // implements heap sort
 // extraMemoryAllocated counts bytes of memory allocated
+// heap sorting uses the heap/ tree structure to sort. First you must obtain the max heap then you can sort.
 void heapSort(int pData[], int n)
 {
     int s = 0;
@@ -129,6 +138,7 @@ void merge(int pData[], int l, int mid, int r)
     free(R);
 }
 
+// merge sort splits data into halves until you get singles than data is reassembled into a sorted array
 // implement merge sort
 // extraMemoryAllocated counts bytes of extra memory allocated
 void mergeSort(int pData[], int l, int r)
@@ -146,6 +156,7 @@ void mergeSort(int pData[], int l, int r)
 
 // implement insertion sort
 // extraMemoryAllocated counts bytes of memory allocated
+// insertion pulls the data out from its current slot and places it to the left into its correct slot and slides over the remaining data to the right 1
 void insertionSort(int* pData, int n)
 {
     int item,j;
@@ -167,6 +178,7 @@ void insertionSort(int* pData, int n)
 
 // implement bubble sort
 // extraMemoryAllocated counts bytes of extra memory allocated
+// bubble sort swaps adjacent elements repeatedly until entire array is sorted takes the longest
 void bubbleSort(int* pData, int n)
 {
     int flag;
@@ -193,6 +205,7 @@ void bubbleSort(int* pData, int n)
 
 // implement selection sort
 // extraMemoryAllocated counts bytes of extra memory allocated
+// finds the smallest element in the array is sticks it in front of the search space repeatedly until entire array is sorted
 void selectionSort(int* pData, int n)
 {
 	int  min_index;
